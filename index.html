@@ -1,61 +1,150 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>浄徳寺 | 公式サイト</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>浄徳寺 個別型永代供養墓</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1a1f2b;
+      --accent: #6c63ff;
+      --bg: #fafafa;
+      --text: #333;
+      --heading-font: 'Noto Serif JP', serif;
+      --body-font: 'Noto Sans JP', sans-serif;
+      --sidebar-w: 200px;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { display:flex; font-family:var(--body-font); color:var(--text); background:var(--bg); }
+    /* Sidebar */
+    .sidebar { position:fixed; top:0; left:0; width:var(--sidebar-w); height:100vh; background:var(--primary); padding-top:2rem; }
+    .sidebar nav a { display:block; padding:1rem; color:#fff; text-decoration:none; font-weight:600; }
+    .sidebar nav a.active, .sidebar nav a:hover { background:var(--accent); color:var(--primary); }
+    /* Main */
+    .content { margin-left:var(--sidebar-w); width:calc(100% - var(--sidebar-w)); }
+    header { background:var(--primary); color:#fff; text-align:center; padding:2rem 1rem; }
+    header h1 { font-family:var(--heading-font); font-size:2.5rem; margin-bottom:0.5rem; }
+    header p { font-size:1rem; opacity:0.8; }
+    section { padding:2rem 1rem; }
+    h2 { font-family:var(--heading-font); font-size:1.8rem; color:var(--primary); margin-bottom:1rem; border-bottom:3px solid var(--accent); display:inline-block; }
+    .temple-photo { text-align:center; margin-bottom:2rem; }
+    .temple-photo img { max-width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+    .gallery { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:2rem; }
+    .gallery-item { flex:1 1 300px; background:#fff; padding:1rem; border-radius:8px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+    .gallery-item h3 { font-family:var(--heading-font); margin-bottom:0.5rem; }
+    .gallery-item img { max-width:100%; height:auto; border-radius:6px; }
+    .pricing { list-style:none; }
+    .pricing li { background:#fff; margin-bottom:1rem; padding:1rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+    .pricing li h3 { font-family:var(--heading-font); font-size:1.2rem; margin-bottom:0.5rem; }
+    .pricing li p { font-size:1.1rem; font-weight:600; color:var(--accent); }
+    .extras { list-style:none; margin-top:1rem; }
+    .extras li { margin-bottom:0.5rem; padding-left:1.5rem; position:relative; }
+    .extras li::before { content:'●'; position:absolute; left:0; color:var(--accent); }
+    .note { font-size:0.9rem; margin-top:0.5rem; }
+    .features { list-style:none; }
+    .features li { background:#fff; margin-bottom:1rem; padding:1rem; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,0.1); }
+    .features li h4 { font-family:var(--heading-font); font-size:1.1rem; margin-bottom:0.5rem; }
+    .features li p { font-size:0.9rem; }
+    .access p, .access ul { margin-bottom:1rem; }
+    .access iframe { width:100%; height:300px; border:0; border-radius:6px; }
+    .contact-info { background:#fff; padding:1rem; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,0.1); }
+    .contact-info p { margin-bottom:0.5rem; }
+    footer { background:var(--primary); color:#fff; text-align:center; padding:1.5rem; font-size:0.9rem; }
+    @media(max-width:768px){ .sidebar{width:60px;} .sidebar nav a{font-size:0.75rem; padding:0.75rem;} .content{margin-left:60px;} header h1{font-size:2rem;} h2{font-size:1.5rem;} .gallery { flex-direction:column; } }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo">浄徳寺</div>
-    <nav class="nav">
-      <a href="index.html">ホーム</a>
-      <a href="service.html">サービス</a>
-      <a href="about.html">寺院情報</a>
-      <a href="access.html">アクセス</a>
+  <aside class="sidebar">
+    <nav>
+      <a href="#photo">お寺の写真</a>
+      <a href="#gallery">ギャラリー</a>
+      <a href="#plans">サービス・料金</a>
+      <a href="#features">特徴</a>
+      <a href="#access">アクセス</a>
+      <a href="#contact" class="active">お問い合わせ</a>
     </nav>
-  </header>
-  <section class="hero">
-    <img src="assets/img/hero.jpg" alt="浄徳寺の境内">
-    <div class="hero-text">
-      <h1>心安らぐ祈りの場</h1>
-      <p>伝統と癒やしの時間をあなたに</p>
-    </div>
-  </section>
-  <main class="content">
-    <section id="intro" class="container">
-      <h2>浄徳寺のご紹介</h2>
-      <p>鎌倉時代に創建された歴史ある浄徳寺は、法要、坐禅会、写経会など多彩な行事を通じて檀信徒の心の支えとなっています。</p>
+  </aside>
+  <div class="content">
+    <header>
+      <h1>浄徳寺 個別型永代供養墓</h1>
+      <p>安心と信頼の永代供養プラン</p>
+    </header>
+    <section id="photo" class="temple-photo">
+      <h2>お寺の写真</h2>
+      <img src="images/temple.jpg" alt="浄徳寺の本堂" />
     </section>
-    <section id="news" class="container">
-      <h2>最新のお知らせ</h2>
-      <ul class="news-list">
-        <li><time datetime="2025-06-01">2025/06/01</time> 夏の写経会 開催</li>
-        <li><time datetime="2025-05-10">2025/05/10</time> サイトをリニューアルしました</li>
-        <li><time datetime="2025-04-15">2025/04/15</time> 永代供養プランを新設</li>
-      </ul>
-    </section>
-    <section id="services" class="container">
-      <h2>主なサービス</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>法要・葬儀</h3>
-          <p>四十九日法要から年回忌、葬儀まで一貫してサポート。</p>
+    <section id="gallery">
+      <h2>お墓・プレート写真</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <h3>永代供養墓イメージ</h3>
+          <img src="images/plan-rendering.png" alt="永代供養墓イメージ" />
         </div>
-        <div class="card">
-          <h3>写経会</h3>
-          <p>毎月第2土曜、心を落ち着ける写経のひととき。</p>
-        </div>
-        <div class="card">
-          <h3>坐禅会</h3>
-          <p>毎月第4土曜、初心者歓迎の坐禅体験。</p>
+        <div class="gallery-item">
+          <h3>ステンレスプレート彫刻例</h3>
+          <img src="images/plate-example.png" alt="ステンレスプレート彫刻例" />
         </div>
       </div>
     </section>
-  </main>
-  <footer class="site-footer">
-    <p>&copy; 2025 浄徳寺</p>
-  </footer>
+    <section id="plans">
+      <h2>サービス・料金</h2>
+      <ul class="pricing">
+        <li><h3>4列</h3><p>25万円</p></li>
+        <li><h3>3列</h3><p>29万円</p></li>
+        <li><h3>2列</h3><p>33万円</p></li>
+        <li><h3>最前列</h3><p>37万円</p></li>
+      </ul>
+      <ul class="extras">
+        <li>仏様の人数に制限はありません。</li>
+        <li>檀家制度無し。</li>
+        <li>宗旨宗派問いません。</li>
+      </ul>
+      <p class="note">※二本目以降継続法要料3万円。</p>
+      <p class="note">ステンレスプレート彫刻例: ○○家</p>
+      <p class="note">別途写しおよび石塔修繕料1万円、納骨袋で用意します。</p>
+    </section>
+    <section id="features">
+      <h2>特徴・サービス</h2>
+      <ul class="features">
+        <li><h4>永代供養</h4><p>後継者がいない方も安心の永代供養プラン</p></li>
+        <li><h4>檀家制度不要</h4><p>どなたでもお気軽にご利用いただけます</p></li>
+        <li><h4>宗旨宗派不問</h4><p>全ての宗教・宗派の方に対応</p></li>
+        <li><h4>法要サポート</h4><p>法要の手配・進行までトータルサポート</p></li>
+      </ul>
+    </section>
+    <section id="access" class="access">
+      <h2>アクセス</h2>
+      <p>住所：兵庫県川西市西多田1-12-8</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6547.941213990691!2d135.40124727521294!3d34.8569658748131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f650b511bdef%3A0xdf75fb2df328b344!2z44CSNjY2LTAxMzgg5YW15bqr55yM5bed6KW_5biC6KW_5aSa55Sw77yR5LiB55uu77yR77yS4oiS77yY!5e0!3m2!1sja!2sjp!4v1747054584305!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <ul>
+        <li>川西能勢口駅から車で約15分</li>
+        <li>川西池田駅から車で約15分</li>
+        <li>宝塚IC（中国自動車道）から車で約9分</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+      <div class="contact-info">
+        <p>〒666-0024 兵庫県川西市西多田1-12-8</p>
+        <p>TEL: 072-793-1847</p>
+      </div>
+    </section>
+    <footer>&copy; 2025 浄徳寺 個別型永代供養墓</footer>
+  </div>
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.sidebar nav a');
+    function onScroll() {
+      let index = sections.length;
+      while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+      navLinks.forEach(link => link.classList.remove('active'));
+      document.querySelector(`.sidebar nav a[href="#${sections[index].id}"]`).classList.add('active');
+    }
+    window.addEventListener('scroll', onScroll);
+    document.addEventListener('DOMContentLoaded', onScroll);
+  </script>
 </body>
 </html>
