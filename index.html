@@ -30,8 +30,12 @@
       display:block; padding:1rem;
       color:#fff; text-decoration:none; font-weight:600;
     }
-    .sidebar nav a.active,
-    .sidebar nav a:hover { background:var(--accent); color:var(--primary); }
+    .sidebar nav a.active, .sidebar nav a:hover { background:var(--accent); color:var(--primary); }
+
+    /* Mobile nav (hidden by default) */
+    .mobile-nav { display:none; }
+    .mobile-nav a { flex:0 0 auto; white-space:nowrap; padding:0.75rem 1rem; color:#fff; text-decoration:none; font-weight:600; }
+    .mobile-nav a.active, .mobile-nav a:hover { background:var(--accent); color:var(--primary); }
 
     /* Main */
     .content { margin-left:var(--sidebar-w); width:calc(100% - var(--sidebar-w)); }
@@ -52,8 +56,8 @@
     .temple-photo img { width:100%; height:auto; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.15); }
 
     /* Gallery */
-    .gallery { display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; margin-bottom:2rem; }
-    .gallery-item { flex:1 1 calc(50% - 1rem); background:#fff; padding:1rem; border-radius:8px; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,0.1); }
+    .gallery { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:2rem; }
+    .gallery-item { background:#fff; padding:1rem; border-radius:8px; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,0.1); flex:1 1 calc(50% - 1rem); }
     .gallery-item h3 { font-family:var(--heading-font); margin-bottom:0.5rem; font-size:1.2rem; }
     .gallery-item img { width:100%; height:auto; border-radius:6px; }
     .gallery-item.plate img { width:50%; margin:0 auto; }
@@ -87,23 +91,27 @@
 
     /* Mobile */
     @media (max-width:600px) {
-      body { display:block; padding:0; }
-      .sidebar { position:relative; width:100%; height:auto; }
-      .sidebar nav { display:flex; overflow-x:auto; -webkit-overflow-scrolling:touch; background:var(--primary); }
-      .sidebar nav a { flex:0 0 auto; white-space:nowrap; padding:.75rem 1rem; font-size:0.9rem; }
-      .content { margin-left:0; padding:0 1rem; }
+      .sidebar { display:none; }
+      .mobile-nav { display:flex; overflow-x:auto; -webkit-overflow-scrolling:touch; background:var(--primary); }
+      .mobile-nav a.active { background:var(--accent); color:var(--primary); }
+      body { display:block; }
+      .content { margin-left:0; width:100%; padding:0; }
+      header { padding:1.5rem 0; }
       header h1 { font-size:1.8rem; }
-      header p { font-size:1rem; }
-      h2 { font-size:1.4rem; }
-      section { padding:1.5rem 0; }
+      header p { font-size:0.95rem; }
+      /* show mobile nav below header */
+      .mobile-nav { margin-bottom:1rem; }
+      /* Titles */
+      h2 { font-size:1.4rem; margin:1rem 0 0.5rem; }
+      section { padding:1rem 0; }
       .gallery { flex-direction:column; }
       .gallery-item { flex:none; width:100%; }
       .access iframe { height:200px; }
       .pricing li h3 { font-size:1.2rem; }
       .pricing li p { font-size:1.1rem; }
       .extras li { font-size:0.95rem; }
-      .features li h4 { font-size:1.2rem; }
-      .features li p { font-size:0.95rem; }
+      .features li h4 { font-size:1.1rem; }
+      .features li p { font-size:0.9rem; }
       .contact-info { padding:1rem; }
     }
   </style>
@@ -111,7 +119,7 @@
 <body>
   <aside class="sidebar">
     <nav>
-      <a href="#photo" class="active">お寺の写真</a>
+      <a href="#photo">お寺の写真</a>
       <a href="#gallery">ギャラリー</a>
       <a href="#plans">サービス・料金</a>
       <a href="#features">特徴</a>
@@ -124,12 +132,18 @@
       <h1>浄徳寺 個別型永代供養墓</h1>
       <p>安心と信頼の永代供養プラン</p>
     </header>
-
+    <nav class="mobile-nav">
+      <a href="#photo" class="active">お寺の写真</a>
+      <a href="#gallery">ギャラリー</a>
+      <a href="#plans">サービス・料金</a>
+      <a href="#features">特徴</a>
+      <a href="#access">アクセス</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
     <section id="photo" class="temple-photo">
       <h2>お寺の写真</h2>
       <img src="images/temple.jpg" alt="浄徳寺の本堂" />
     </section>
-
     <section id="gallery">
       <h2>お墓・プレート写真</h2>
       <div class="gallery">
@@ -143,7 +157,6 @@
         </div>
       </div>
     </section>
-
     <section id="plans">
       <h2>サービス・料金</h2>
       <ul class="pricing">
@@ -161,7 +174,6 @@
       <p class="note">ステンレスプレート彫刻例: ○○家</p>
       <p class="note">別途写しおよび石塔修繕料1万円、納骨袋で用意します。</p>
     </section>
-
     <section id="features">
       <h2>特徴・サービス</h2>
       <ul class="features">
@@ -171,7 +183,6 @@
         <li><h4>法要サポート</h4><p>法要の手配・進行までトータルサポート</p></li>
       </ul>
     </section>
-
     <section id="access" class="access">
       <h2>アクセス</h2>
       <p>住所：兵庫県川西市西多田1-12-8</p>
@@ -182,7 +193,6 @@
         <li>宝塚IC（中国自動車道）から車で約9分</li>
       </ul>
     </section>
-
     <section id="contact">
       <h2>お問い合わせ</h2>
       <div class="contact-info">
@@ -190,18 +200,17 @@
         <p>TEL: 072-793-1847</p>
       </div>
     </section>
-
     <footer>&copy; 2025 浄徳寺 個別型永代供養墓</footer>
   </div>
 
   <script>
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.sidebar nav a');
+    const navLinks = document.querySelectorAll('.sidebar nav a, .mobile-nav a');
     function onScroll() {
       let index = sections.length;
       while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
       navLinks.forEach(link => link.classList.remove('active'));
-      document.querySelector(`.sidebar nav a[href="#${sections[index].id}"]`).classList.add('active');
+      document.querySelectorAll(`.sidebar nav a[href="#${sections[index].id}"], .mobile-nav a[href="#${sections[index].id]}"]`).forEach(el => el.classList.add('active'));
     }
     window.addEventListener('scroll', onScroll);
     document.addEventListener('DOMContentLoaded', onScroll);
