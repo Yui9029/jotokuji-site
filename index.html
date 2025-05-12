@@ -30,12 +30,15 @@
     header p { font-size:1rem; opacity:0.8; }
     section { padding:2rem 1rem; }
     h2 { font-family:var(--heading-font); font-size:1.8rem; color:var(--primary); margin-bottom:1rem; border-bottom:3px solid var(--accent); display:inline-block; }
+    /* お寺写真 */
     .temple-photo { text-align:center; margin-bottom:2rem; }
     .temple-photo img { max-width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+    /* ギャラリー */
     .gallery { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:2rem; }
     .gallery-item { flex:1 1 300px; background:#fff; padding:1rem; border-radius:8px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
     .gallery-item h3 { font-family:var(--heading-font); margin-bottom:0.5rem; }
     .gallery-item img { max-width:100%; height:auto; border-radius:6px; }
+    /* サービス・料金 */
     .pricing { list-style:none; }
     .pricing li { background:#fff; margin-bottom:1rem; padding:1rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
     .pricing li h3 { font-family:var(--heading-font); font-size:1.2rem; margin-bottom:0.5rem; }
@@ -44,12 +47,16 @@
     .extras li { margin-bottom:0.5rem; padding-left:1.5rem; position:relative; }
     .extras li::before { content:'●'; position:absolute; left:0; color:var(--accent); }
     .note { font-size:0.9rem; margin-top:0.5rem; }
+    /* 特徴・サービス */
     .features { list-style:none; }
     .features li { background:#fff; margin-bottom:1rem; padding:1rem; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,0.1); }
     .features li h4 { font-family:var(--heading-font); font-size:1.1rem; margin-bottom:0.5rem; }
     .features li p { font-size:0.9rem; }
+    /* アクセス */
     .access p, .access ul { margin-bottom:1rem; }
+    .access ul { list-style:none; padding-left:0; }
     .access iframe { width:100%; height:300px; border:0; border-radius:6px; }
+    /* お問い合わせ */
     .contact-info { background:#fff; padding:1rem; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,0.1); }
     .contact-info p { margin-bottom:0.5rem; }
     footer { background:var(--primary); color:#fff; text-align:center; padding:1.5rem; font-size:0.9rem; }
@@ -72,10 +79,12 @@
       <h1>浄徳寺 個別型永代供養墓</h1>
       <p>安心と信頼の永代供養プラン</p>
     </header>
+
     <section id="photo" class="temple-photo">
       <h2>お寺の写真</h2>
       <img src="images/temple.jpg" alt="浄徳寺の本堂" />
     </section>
+
     <section id="gallery">
       <h2>お墓・プレート写真</h2>
       <div class="gallery">
@@ -89,6 +98,7 @@
         </div>
       </div>
     </section>
+
     <section id="plans">
       <h2>サービス・料金</h2>
       <ul class="pricing">
@@ -106,6 +116,7 @@
       <p class="note">ステンレスプレート彫刻例: ○○家</p>
       <p class="note">別途写しおよび石塔修繕料1万円、納骨袋で用意します。</p>
     </section>
+
     <section id="features">
       <h2>特徴・サービス</h2>
       <ul class="features">
@@ -115,6 +126,7 @@
         <li><h4>法要サポート</h4><p>法要の手配・進行までトータルサポート</p></li>
       </ul>
     </section>
+
     <section id="access" class="access">
       <h2>アクセス</h2>
       <p>住所：兵庫県川西市西多田1-12-8</p>
@@ -125,6 +137,7 @@
         <li>宝塚IC（中国自動車道）から車で約9分</li>
       </ul>
     </section>
+
     <section id="contact">
       <h2>お問い合わせ</h2>
       <div class="contact-info">
@@ -132,8 +145,10 @@
         <p>TEL: 072-793-1847</p>
       </div>
     </section>
+
     <footer>&copy; 2025 浄徳寺 個別型永代供養墓</footer>
   </div>
+
   <script>
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.sidebar nav a');
@@ -148,3 +163,4 @@
   </script>
 </body>
 </html>
+
