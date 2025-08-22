@@ -9,17 +9,18 @@
 
   <!--
     元のコンテンツを保持しつつ、
-    ① 和の“墨”トーンに微調整（アクセントは落ち着いた金）
-    ② 軽量モーション（スクロール出現・ヒーローのごく軽いパララックス）
-    ③ TELを072-793-1874に更新（タップで発信）
-    を“後付け”で実装しています。既存スタイルと衝突しないよう jt- プレフィックスを使用。
+    ① 和の“墨”トーン（アクセントは控えめな金）
+    ② 可読性UP（暗めオーバーレイ＋テキストシャドウ）
+    ③ 軽量モーション（スクロール出現・弱いパララックス）
+    ④ TELを072-793-1874に更新（タップで発信）
+    を後付けで実装。既存スタイルと衝突しないよう jt- 接頭辞を使用。
   -->
   <style>
     :root {
-      /* ▼配色を和の墨トーンに（必要に応じて微調整OK） */
-      --primary: #151515;          /* 墨（ベース濃色） */
-      --accent:  #b89b2f;          /* くすみ金（見出し下線やホバー） */
-      --bg:      #fafafa;          /* 背景（和紙っぽい明るめ） */
+      /* ▼和の墨トーン（必要に応じて微調整OK） */
+      --primary: #151515;          /* 墨（濃） */
+      --accent:  #b89b2f;          /* くすみ金（見出し線などに控えめに） */
+      --bg:      #fafafa;          /* 背景（和紙テイスト） */
       --text:    #222;             /* 文字色 */
       --heading-font: 'Noto Serif JP', serif;
       --body-font:    'Noto Sans JP',  sans-serif;
@@ -30,32 +31,73 @@
     html { scroll-behavior: smooth; }
     body { display:flex; font-family:var(--body-font); color:var(--text); background:var(--bg); }
 
-    /* Sidebar */
+    /* Sidebar（PC用固定メニュー） */
     .sidebar { position:fixed; top:0; left:0; width:var(--sidebar-w); height:100vh; background:var(--primary); padding-top:2rem; }
-    .sidebar nav a { display:block; padding:1rem; color:#fff; text-decoration:none; font-weight:600; transition:background .3s ease, color .3s ease; }
+    .sidebar nav a {
+      display:block; padding:1rem; color:#fff; text-decoration:none; font-weight:600;
+      transition: background .3s ease, color .3s ease;
+    }
     .sidebar nav a.active, .sidebar nav a:hover { background:var(--accent); color:var(--primary); }
 
-    /* Mobile nav (hidden by default) */
+    /* Mobile nav（600px以下で表示） */
     .mobile-nav { display:none; }
-    .mobile-nav a { flex:0 0 auto; white-space:nowrap; padding:0.75rem 1rem; color:#fff; text-decoration:none; font-weight:600; transition:background .3s ease, color .3s ease; }
+    .mobile-nav a {
+      flex:0 0 auto; white-space:nowrap; padding:0.75rem 1rem; color:#fff; text-decoration:none; font-weight:600;
+      transition: background .3s ease, color .3s ease;
+    }
     .mobile-nav a.active, .mobile-nav a:hover { background:var(--accent); color:var(--primary); }
 
-    /* Main */
+    /* Main コンテンツ領域 */
     .content { margin-left:var(--sidebar-w); width:calc(100% - var(--sidebar-w)); }
 
-    /* ▼ヘッダを“ヒーロー”化（背景を寺院写真に／軽いパララックス） */
-    header { color:#fff; text-align:center; padding:2.6rem 1rem; position:relative; isolation:isolate; overflow:hidden; }
-    header::before{ content:""; position:absolute; inset:-10%; z-index:-1;
-      background:url('images/temple.jpg') center/cover no-repeat;
-      filter:brightness(.90); /* 文字が読める明るさに調整 */
-      transform:translate3d(0, calc(var(--jt-parallax, 0px) * -1), 0) scale(1.04);
-      transition:transform .2s linear; will-change:transform;
+    /* ▼ヘッダ（ヒーロー）：中央配置 + 暗めオーバーレイ + 弱パララックス */
+    header {
+      color:#fff; text-align:center; position:relative; isolation:isolate; overflow:hidden;
+      min-height: min(68vh, 720px);
+      display:grid; place-items:center;
+      padding: 0 16px;
     }
-    header h1 { font-family:var(--heading-font); font-size:2.5rem; margin-bottom:0.5rem; line-height:1.2; letter-spacing:.02em; }
-    header p { font-size:1rem; opacity:0.9; }
+    header::before{
+      content:""; position:absolute; inset:-10%; z-index:-2;
+      background:url('images/temple.jpg') center 40% / cover no-repeat; /* 文字裏が暗めになる位置に */
+      filter: brightness(.75); /* 文字が読みやすい明るさに */
+      transform: translate3d(0, calc(var(--jt-parallax, 0px) * -1), 0) scale(1.04);
+      transition: transform .2s linear; will-change: transform;
+    }
+    /* 半透明の黒グラデーションでさらに可読性UP */
+    header::after{
+      content:""; position:absolute; inset:0; z-index:-1;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.38) 40%, rgba(0,0,0,.38) 60%, rgba(0,0,0,.25) 100%),
+        radial-gradient(1200px 420px at 50% 52%, rgba(0,0,0,.35), transparent 70%);
+    }
+    .jt-hero-inner{
+      max-width: 1100px; width: 100%; margin: 0 auto;
+      padding: clamp(48px, 10vw, 120px) 0;
+    }
+    header h1{
+      font-family: var(--heading-font);
+      font-size: clamp(28px, 6vw, 64px);
+      letter-spacing: .04em; line-height: 1.2; margin: 0 0 12px;
+      text-shadow: 0 3px 10px rgba(0,0,0,.5);
+    }
+    header p{
+      font-size: clamp(14px, 2.4vw, 18px);
+      opacity: .95;
+      text-shadow: 0 2px 8px rgba(0,0,0,.45);
+    }
 
     section { padding:2rem 1rem; }
-    h2 { font-family:var(--heading-font); font-size:1.8rem; color:var(--primary); margin-bottom:1rem; border-bottom:3px solid var(--accent); display:inline-block; }
+
+    /* ▼見出し（Canva寄りに中央＋細い金ライン） */
+    h2{
+      font-family: var(--heading-font);
+      font-size: 1.8rem; color: var(--primary);
+      margin: 0 0 .75rem; border: none; text-align: center;
+    }
+    h2::after{
+      content:""; display:block; width:64px; height:2px; background:var(--accent); margin:10px auto 0;
+    }
 
     /* Temple photo */
     .temple-photo { text-align:center; margin-bottom:2rem; }
@@ -102,9 +144,9 @@
       .mobile-nav a.active { background:var(--accent); color:var(--primary); }
       body { display:block; }
       .content { margin-left:0; width:100%; padding:0; }
-      header { padding:2rem 1rem; }
-      header h1 { font-size:1.9rem; }
-      header p { font-size:0.95rem; }
+      header::before{ filter: brightness(.65); } /* スマホでは少し暗めで可読性を担保 */
+      header h1 { font-size: clamp(26px, 7vw, 40px); }
+      header p { font-size: clamp(13px, 3.4vw, 16px); }
       .mobile-nav { margin-bottom:1rem; }
       h2 { font-size:1.4rem; margin:1rem 0 0.5rem; }
       section { padding:1rem 0; }
@@ -122,15 +164,21 @@
     /* ================================
        後付け：jt- モーション＆ボタン
        ================================ */
-    .jt-btn{display:inline-block;padding:12px 20px;border-radius:9999px;border:1px solid rgba(0,0,0,.12);background:#fff;transition:transform .3s ease,box-shadow .3s ease}
-    .jt-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.12)}
+    .jt-btn{
+      display:inline-block; padding:12px 20px; border-radius:9999px; border:1px solid rgba(0,0,0,.12);
+      background:#fff; transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .jt-btn:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,.12); }
 
-    .jt-reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;will-change:opacity,transform}
-    .jt-reveal.is-visible{opacity:1;transform:none}
+    .jt-reveal{
+      opacity:0; transform:translateY(22px);
+      transition:opacity .8s ease, transform .8s ease; will-change:opacity, transform;
+    }
+    .jt-reveal.is-visible{ opacity:1; transform:none; }
 
     @media(prefers-reduced-motion:reduce){
-      .jt-reveal{transition:none !important;transform:none !important}
-      header::before{transition:none !important;transform:none !important}
+      .jt-reveal{ transition:none !important; transform:none !important; }
+      header::before{ transition:none !important; transform:none !important; }
     }
   </style>
 </head>
@@ -148,13 +196,16 @@
   </aside>
 
   <div class="content">
-    <!-- ヒーロー：背景は temple.jpg、軽いパララックス。jt-reveal でふわっと出現 -->
+    <!-- ヒーロー：暗めオーバーレイ＋弱パララックス＋出現 -->
     <header class="jt-reveal">
-      <h1>川西市 浄徳寺 個別型永代供養墓</h1>
-      <p>川西市のお墓</p>
-      <p>安心と信頼の永代供養プラン</p>
+      <div class="jt-hero-inner">
+        <h1>川西市 浄徳寺 個別型永代供養墓</h1>
+        <p>川西市のお墓</p>
+        <p>安心と信頼の永代供養プラン</p>
+      </div>
     </header>
 
+    <!-- モバイル用ナビ -->
     <nav class="mobile-nav">
       <a href="#photo" class="active">お寺の写真</a>
       <a href="#gallery">ギャラリー</a>
@@ -166,7 +217,6 @@
 
     <section id="photo" class="temple-photo jt-reveal">
       <h2>お寺の写真</h2>
-      <!-- 画像の遅延読み込みで初期表示を軽く -->
       <img src="images/temple.jpg" alt="浄徳寺の本堂" loading="lazy" />
     </section>
 
@@ -244,7 +294,7 @@
       let index = sections.length;
       while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
       navLinks.forEach(link => link.classList.remove('active'));
-      document.querySelectorAll(`.sidebar nav a[href="#${sections[index].id}"], .mobile-nav a[href="#${sections[index].id}"]`).forEach(el => el.classList.add('active'));
+      document.querySelectorAll(`.sidebar nav a[href="#${sections[index].id}"], .mobile-nav a[href="#${sections[index].id]}"]`).forEach(el => el.classList.add('active'));
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     document.addEventListener('DOMContentLoaded', onScroll);
@@ -253,14 +303,25 @@
   <!-- 後付け：jt- モーション（出現＆ヒーローパララックス）。transform/opacityのみで軽い -->
   <script>
     (()=>{
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach((e)=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
-      },{ threshold:0.12, rootMargin:'0px 0px -10% 0px' });
-      document.querySelectorAll('.jt-reveal').forEach(el=>io.observe(el));
 
+      // スクロール出現（jt-reveal）
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach((e)=>{
+          if(e.isIntersecting){
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target); // 一度出たら監視解除で無駄を減らす
+          }
+        });
+      }, { threshold:0.12, rootMargin:'0px 0px -10% 0px' });
+      document.querySelectorAll('.jt-reveal').forEach(el => io.observe(el));
+
+      // ヒーロー背景の弱いパララックス（transformのみで軽い）
       const headerEl = document.querySelector('header');
       if(headerEl){
-        const onScroll=()=>{ const y=Math.min(window.scrollY*0.2, 80); headerEl.style.setProperty('--jt-parallax', y+'px'); };
+        const onScroll = () => {
+          const y = Math.min(window.scrollY * 0.2, 80); // 動きすぎないよう上限80px
+          headerEl.style.setProperty('--jt-parallax', y + 'px');
+        };
         window.addEventListener('scroll', onScroll, { passive:true });
         onScroll();
       }
