@@ -1,22 +1,36 @@
-# 浄徳寺 個別型永代供養墓
+# 浄徳寺サイト v3
 
-このリポジトリを GitHub Pages で公開します。
+GitHub Pages でそのまま公開できる静的サイトです。
 
 ## ファイル構成
+
+```text
+index.html            # 文章・構成
+404.html              # 404ページ
+styles.css            # デザイン
+script.js             # モバイルメニューなどの軽い動作
+.nojekyll             # GitHub Pages用
+favicon.svg           # アイコン
+images/
+  entrance-hero.jpg   # メイン画像
+  entrance-detail.jpg # サブ画像
+  entrance-square.jpg # 予備画像
+  ogp.jpg             # SNS共有画像
+GitHub公開手順.md      # 初心者向け公開手順
+README.md
 ```
-/jotokuji-github
-├ index.html
-├ README.md
-├ .gitignore
-└ images/
-    ├ temple.jpg
-    ├ plan-rendering.png
-    └ plate-example.png
-```
 
-## 公開手順（ブラウザのみ）
+## どのファイルを編集すればよいか
 
-1. GitHubでリポジトリ作成
-2. ファイルをドラッグ&ドロップでアップロード
-3. Settings→Pagesで公開設定
+- 文章を変えたい → `index.html`
+- 色や余白を変えたい → `styles.css`
+- スマホメニューなどを変えたい → `script.js`
+- 写真を差し替えたい → `images` フォルダ
 
+## まずやること
+
+1. このフォルダ一式を GitHub リポジトリにアップロード
+2. `Settings > Pages` で `main / root` を公開元に設定
+3. 数分待って公開URLを確認
+
+詳しくは `GitHub公開手順.md` を見てください。
