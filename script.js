@@ -1,17 +1,16 @@
-const toggleButton = document.querySelector('.menu-toggle');
-const globalNav = document.querySelector('.global-nav');
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.global-nav');
 
-if (toggleButton && globalNav) {
-  toggleButton.addEventListener('click', () => {
-    const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
-    toggleButton.setAttribute('aria-expanded', String(!expanded));
-    globalNav.classList.toggle('is-open');
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
   });
 
-  globalNav.querySelectorAll('a').forEach((link) => {
+  nav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      toggleButton.setAttribute('aria-expanded', 'false');
-      globalNav.classList.remove('is-open');
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
     });
   });
 }
