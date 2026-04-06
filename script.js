@@ -1,17 +1,17 @@
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.site-nav');
+const toggleButton = document.querySelector('.menu-toggle');
+const globalNav = document.querySelector('.global-nav');
 
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!expanded));
-    nav.classList.toggle('is-open');
+if (toggleButton && globalNav) {
+  toggleButton.addEventListener('click', () => {
+    const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
+    toggleButton.setAttribute('aria-expanded', String(!expanded));
+    globalNav.classList.toggle('is-open');
   });
 
-  nav.querySelectorAll('a').forEach((link) => {
+  globalNav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      nav.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
+      toggleButton.setAttribute('aria-expanded', 'false');
+      globalNav.classList.remove('is-open');
     });
   });
 }

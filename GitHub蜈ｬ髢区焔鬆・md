@@ -1,0 +1,33 @@
+# GitHub への反映手順
+
+## 1. ZIP を解凍する
+ダウンロードした ZIP を解凍します。
+
+## 2. 中身だけをアップロードする
+`jotokuji-site-v5` フォルダごとではなく、**中に入っているファイルだけ**を GitHub にアップロードしてください。
+
+置く場所は、リポジトリの **ルート直下** です。
+
+## 3. アップロードするもの
+- `index.html`
+- `404.html`
+- `styles.css`
+- `script.js`
+- `.nojekyll`
+- `favicon.svg`
+- `README.md`
+- `GitHub公開手順.md`
+- `images` フォルダ内の画像
+
+## 4. 公開設定
+Settings → Pages → Build and deployment
+
+- Source: `Deploy from a branch`
+- Branch: `main`
+- Folder: `/ (root)`
+
+## 5. 反映確認
+公開URL:
+`https://yui9029.github.io/jotokuji-site/`
+
+古い表示のままの場合は、`Ctrl + F5` で再読み込みしてください。
