@@ -1,39 +1,6 @@
-# GitHub 反映手順（差し替え版）
-
-## 1. ZIPを解凍する
-ZIPファイルをダウンロードして解凍してください。
-
-## 2. 中身だけをアップロードする
-GitHub の `Yui9029/jotokuji-site` を開き、
-`Add file` → `Upload files` を押します。
-
-### 注意
-`jotokuji-site-v4` フォルダそのものはアップロードしません。  
-**中に入っているファイルだけ**をアップロードしてください。
-
-## 3. 上書きするファイル
-- index.html
-- 404.html
-- styles.css
-- script.js
-- .nojekyll
-- favicon.svg
-- images フォルダ内の画像
-
-## 4. Commit changes を押す
-アップロード後、画面下の `Commit changes` を押してください。
-
-## 5. 公開URLを確認する
-数分後に以下を開いて確認します。
-https://yui9029.github.io/jotokuji-site/
-
-## 6. 古い表示のままなら
-- `Ctrl + F5`
-- シークレットウィンドウで開く
-- 1〜3分待って再読み込み
-
-## 7. 今回の変更の見どころ
-- 写真を複数使用
-- 初めての方向け説明を上側に配置
-- 写真セクションをより自然な内容に変更
-- スマホ対応を維持
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#f6f1e8"/>
+  <path d="M12 42h40L42 20H22z" fill="#3a2d22" opacity=".12"/>
+  <path d="M14 42h36M18 42V32m28 10V32M20 32h24M22 28h20M24 24h16" stroke="#3a2d22" stroke-width="3" stroke-linecap="round"/>
+  <path d="M28 18h8" stroke="#9a7a55" stroke-width="3" stroke-linecap="round"/>
+</svg>

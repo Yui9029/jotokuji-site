@@ -1,17 +1,3 @@
-const toggleButton = document.querySelector('.menu-toggle');
-const globalNav = document.querySelector('.global-nav');
+# 浄徳寺 個別型永代供養墓
 
-if (toggleButton && globalNav) {
-  toggleButton.addEventListener('click', () => {
-    const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
-    toggleButton.setAttribute('aria-expanded', String(!expanded));
-    globalNav.classList.toggle('is-open');
-  });
-
-  globalNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      toggleButton.setAttribute('aria-expanded', 'false');
-      globalNav.classList.remove('is-open');
-    });
-  });
-}
+GitHub Pages で公開する静的サイトです。

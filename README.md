@@ -1,30 +1,382 @@
-# 浄徳寺 個別型永代供養墓 サイト
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>川西市の永代供養墓なら浄徳寺｜個別型・檀家制度不要・宗旨宗派不問</title>
+  <meta name="description" content="兵庫県川西市の浄徳寺による個別型永代供養墓のご案内。永代使用料・永代管理料・納骨法要料込み。檀家制度不要、宗旨宗派不問。初めての方にもわかりやすく、24時間お電話でご相談いただけます。">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#f6f1e8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="川西市の永代供養墓なら浄徳寺">
+  <meta property="og:description" content="個別型・檀家制度不要・宗旨宗派不問。永代使用料・永代管理料・納骨法要料込み。初めての方にもわかりやすくご案内いたします。">
+  <meta property="og:image" content="images/ogp.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"PlaceOfWorship",
+    "name":"浄徳寺",
+    "telephone":"072-793-1874",
+    "address":{
+      "@type":"PostalAddress",
+      "postalCode":"666-0138",
+      "addressRegion":"兵庫県",
+      "addressLocality":"川西市",
+      "streetAddress":"西多田1-12-8"
+    },
+    "image":"images/hero-entrance.jpg"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
 
-GitHub Pages 用の静的サイト一式です。
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="浄徳寺 トップへ">
+        <span class="brand-kicker">兵庫県川西市</span>
+        <span class="brand-name">浄徳寺 個別型永代供養墓</span>
+      </a>
 
-## ファイル構成
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
 
-- `index.html` … 本文と構成
-- `styles.css` … デザイン
-- `script.js` … スマホメニュー
-- `favicon.svg` … ファビコン
-- `404.html` … 404ページ
-- `images/` … 掲載画像
+      <nav class="global-nav" id="global-nav" aria-label="サイト内メニュー">
+        <a href="#guide">初めての方へ</a>
+        <a href="#reasons">選ばれる理由</a>
+        <a href="#pricing">料金</a>
+        <a href="#flow">ご相談の流れ</a>
+        <a href="#temple">お寺紹介</a>
+        <a href="#gallery">境内の雰囲気</a>
+        <a href="#access">アクセス</a>
+        <a class="nav-call" href="tel:0727931874">お電話で相談</a>
+      </nav>
+    </div>
+  </header>
 
-## 公開方法
+  <main id="main">
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">川西市で永代供養墓をお探しの方へ</p>
+        <h1>浄徳寺が永代にわたり供養する<br>個別型永代供養墓</h1>
+        <p class="hero-lead">
+          檀家制度不要・宗旨宗派不問。<br>
+          合葬ではない個別型の永代供養墓を、初めての方にもわかりやすくご案内します。
+        </p>
 
-GitHub リポジトリのルート直下に、この一式を置いてください。  
-`images` フォルダも忘れずにアップロードしてください。
+        <ul class="hero-points" aria-label="浄徳寺の特徴">
+          <li>個別型</li>
+          <li>合葬ではありません</li>
+          <li>檀家制度不要</li>
+          <li>宗旨宗派不問</li>
+        </ul>
 
-GitHub Pages の設定は以下です。
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:0727931874">お電話で相談する</a>
+          <a class="btn btn-secondary" href="#pricing">料金を見る</a>
+        </div>
 
-- Source: `Deploy from a branch`
-- Branch: `main`
-- Folder: `/ (root)`
+        <p class="hero-note">見学・ご相談・お問い合わせは、時間帯を問わずお気軽にお電話ください。24時間対応可能です。</p>
+      </div>
+    </section>
 
-## 今回の改善ポイント
+    <section class="trust-strip" aria-label="浄徳寺の特徴まとめ">
+      <div class="container trust-grid">
+        <article class="trust-card">
+          <p class="trust-label">ご相談しやすさ</p>
+          <p class="trust-value">24時間お電話受付</p>
+        </article>
+        <article class="trust-card">
+          <p class="trust-label">費用</p>
+          <p class="trust-value">掲載料金は3項目込み</p>
+        </article>
+        <article class="trust-card">
+          <p class="trust-label">供養のかたち</p>
+          <p class="trust-value">合葬ではない個別型</p>
+        </article>
+      </div>
+    </section>
 
-- 前回の落ち着いた見た目をベースに再設計
-- 複数写真を全体に自然に配置
-- 「初めての方へ」を写真セクションより前に配置
-- PC / スマホの両方で見やすいレイアウトに調整
+    <section class="section section-soft" id="guide">
+      <div class="container">
+        <div class="section-heading guide-heading">
+          <p class="section-kicker">初めて永代供養を考える方へ</p>
+          <h2>初めての方にも、順を追ってわかりやすくご案内します</h2>
+          <p>永代供養を検討し始めたばかりの方にも安心してご覧いただけるよう、まず知っておきたいポイントから整理しています。</p>
+        </div>
+
+        <div class="guide-cards">
+          <article class="guide-card">
+            <span class="guide-step">01</span>
+            <h3>永代供養の考え方を知る</h3>
+            <p>「お寺が供養を続けていくお墓」であることや、どのような方に向いているかを、できるだけやさしくご説明します。</p>
+          </article>
+          <article class="guide-card">
+            <span class="guide-step">02</span>
+            <h3>費用に何が含まれるか確認する</h3>
+            <p>掲載金額には、永代使用料・永代管理料・納骨法要料が含まれています。初めての方にも費用の見通しが立てやすいようにしています。</p>
+          </article>
+          <article class="guide-card">
+            <span class="guide-step">03</span>
+            <h3>ご相談からご納骨までの流れを見る</h3>
+            <p>ご相談の流れをあらかじめご覧いただくことで、どのように進むのかを落ち着いてイメージしていただけます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reasons">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="section-kicker">浄徳寺の永代供養墓</p>
+          <h2>選ばれる理由</h2>
+          <p>初めての方にも安心してご検討いただけるよう、浄徳寺の特徴を整理してご案内しています。</p>
+        </div>
+
+        <div class="reasons-grid">
+          <article class="reason-card">
+            <div class="reason-number">01</div>
+            <h3>浄徳寺が永代にわたり供養</h3>
+            <p>お寺が責任をもってご供養いたします。長く安心してお任せいただける永代供養墓です。</p>
+          </article>
+          <article class="reason-card">
+            <div class="reason-number">02</div>
+            <h3>合葬ではない個別型</h3>
+            <p>ご遺骨が他の方と一緒になることはありません。個別にお納めするかたちをご希望の方に向いています。</p>
+          </article>
+          <article class="reason-card">
+            <div class="reason-number">03</div>
+            <h3>檀家制度不要・宗旨宗派不問</h3>
+            <p>お寺とのご縁が初めての方にもご相談いただきやすいよう、宗派を問わずご案内しています。</p>
+          </article>
+          <article class="reason-card">
+            <div class="reason-number">04</div>
+            <h3>掲載料金がわかりやすい</h3>
+            <p>掲載している金額には、永代使用料・永代管理料・納骨法要料が含まれています。</p>
+          </article>
+          <article class="reason-card">
+            <div class="reason-number">05</div>
+            <h3>人数制限なくご相談可能</h3>
+            <p>仏様の人数に制限はありません。ご家族でのご相談もしやすい永代供養墓です。</p>
+          </article>
+          <article class="reason-card">
+            <div class="reason-number">06</div>
+            <h3>時間を問わず相談しやすい</h3>
+            <p>ご相談はお電話中心で承っています。気になった時にご連絡いただけるよう、24時間対応可能です。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="pricing">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">費用のご案内</p>
+          <h2>サービス・料金</h2>
+          <p>掲載している金額には、<strong>永代使用料・永代管理料・納骨法要料</strong>が含まれています。</p>
+        </div>
+
+        <div class="pricing-shell">
+          <div class="pricing-grid">
+            <article class="price-card">
+              <h3>4列</h3>
+              <p class="price">25万円</p>
+            </article>
+            <article class="price-card">
+              <h3>3列</h3>
+              <p class="price">29万円</p>
+            </article>
+            <article class="price-card">
+              <h3>2列</h3>
+              <p class="price">33万円</p>
+            </article>
+            <article class="price-card price-card-featured">
+              <span class="price-badge">おすすめ</span>
+              <h3>最前列</h3>
+              <p class="price">37万円</p>
+            </article>
+          </div>
+
+          <div class="pricing-meta">
+            <div class="pricing-box">
+              <h3>料金に含まれるもの</h3>
+              <ul class="plain-list">
+                <li>永代使用料</li>
+                <li>永代管理料</li>
+                <li>納骨法要料</li>
+                <li>銘板（白御影石 25cm×25cm×43cm〜140cm）</li>
+                <li>ステンレスプレート 15cm×15cm 1枚</li>
+              </ul>
+            </div>
+            <div class="pricing-box">
+              <h3>別途費用など</h3>
+              <ul class="plain-list">
+                <li>納骨式お手伝い料：1万円</li>
+                <li>二体目以降 継続法要料：3万円</li>
+                <li>納品袋をご用意いたします</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="flow">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="section-kicker">ご相談からご納骨まで</p>
+          <h2>ご相談の流れ</h2>
+          <p>その場で決める必要はありません。順を追って、落ち着いてご検討いただけます。</p>
+        </div>
+
+        <ol class="flow-timeline">
+          <li class="flow-item">
+            <div class="flow-dot">1</div>
+            <div class="flow-card">
+              <h3>お電話でお問い合わせ</h3>
+              <p>見学のご希望やご事情、ご不明点をお伺いします。時間帯は気にせず、お気軽にご連絡ください。</p>
+            </div>
+          </li>
+          <li class="flow-item">
+            <div class="flow-dot">2</div>
+            <div class="flow-card">
+              <h3>ご説明・ご相談</h3>
+              <p>永代供養の内容や費用について、初めての方にもできるだけわかりやすくご案内いたします。</p>
+            </div>
+          </li>
+          <li class="flow-item">
+            <div class="flow-dot">3</div>
+            <div class="flow-card">
+              <h3>ご検討</h3>
+              <p>気になる点を整理しながら、落ち着いてご検討いただけます。すぐに決める必要はありません。</p>
+            </div>
+          </li>
+          <li class="flow-item">
+            <div class="flow-dot">4</div>
+            <div class="flow-card">
+              <h3>お手続き・ご納骨</h3>
+              <p>ご希望が固まりましたら、必要なお手続きやご納骨についてご案内いたします。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-soft temple-section" id="temple">
+      <div class="container temple-grid">
+        <figure class="temple-photo">
+          <img src="images/temple-mainhall.jpg" alt="浄徳寺の本堂">
+        </figure>
+        <div class="temple-copy">
+          <div class="section-heading">
+            <p class="section-kicker">お寺紹介</p>
+            <h2>浄徳寺について</h2>
+          </div>
+          <p class="body-large">
+            浄徳寺は真宗大谷派の寺院です。能勢電鉄妙見線の「多田駅」「鼓滝駅」「鶯の森駅」が最寄りであり、歴史ある地域に根ざしたお寺です。
+          </p>
+          <p>
+            本堂のある境内は、初めてお越しになる方にも落ち着いて手を合わせていただける、静かな雰囲気を大切にしています。
+          </p>
+          <div class="temple-mini-points">
+            <div>地域に根ざした寺院</div>
+            <div>静かで落ち着いた境内</div>
+            <div>初めての方にもご相談しやすい環境</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="section-kicker">境内の雰囲気</p>
+          <h2>写真で見る浄徳寺</h2>
+          <p>初めてお越しになる方にも境内の雰囲気が伝わるよう、景色の一部をご紹介しています。</p>
+        </div>
+
+        <div class="gallery-grid two-up">
+          <figure class="gallery-item">
+            <img src="images/gallery-lantern.jpg" alt="浄徳寺の石灯籠">
+            <figcaption>
+              <strong>石灯籠</strong>
+              <span>境内に佇む石灯籠です。お寺ならではの落ち着いた雰囲気を感じていただけます。</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/gallery-garden.jpg" alt="浄徳寺の境内の小道">
+            <figcaption>
+              <strong>境内の小道</strong>
+              <span>境内へ続く小道です。初めてお越しの方にも、穏やかな空気を感じていただけます。</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="access">
+      <div class="container access-grid">
+        <div class="access-copy">
+          <div class="section-heading">
+            <p class="section-kicker">アクセス</p>
+            <h2>お寺までのご案内</h2>
+          </div>
+          <p class="address">〒666-0138<br>兵庫県川西市西多田1-12-8</p>
+          <ul class="plain-list access-list">
+            <li>川西能勢口駅から車で約15分</li>
+            <li>宝塚IC（中国自動車道）から車で約9分</li>
+            <li>能勢電鉄妙見線「多田駅」「鼓滝駅」「鶯の森駅」が最寄りです</li>
+          </ul>
+          <div class="access-actions">
+            <a class="btn btn-outline" href="https://maps.app.goo.gl/2CKfLxkK2UYbUCqq8" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <iframe
+            title="浄徳寺の地図"
+            src="https://www.google.com/maps?q=%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%B7%9D%E8%A5%BF%E5%B8%82%E8%A5%BF%E5%A4%9A%E7%94%B01-12-8&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <p class="section-kicker">お問い合わせ</p>
+            <h2>見学・ご相談・お問い合わせは、お電話で承っています</h2>
+            <p>初めての方にもわかりやすくご案内いたします。時間帯を問わず、お気軽にご連絡ください。</p>
+          </div>
+          <div class="contact-actions">
+            <p class="tel-display">072-793-1874</p>
+            <a class="btn btn-primary btn-large" href="tel:0727931874">お電話で相談する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-title">浄徳寺 個別型永代供養墓</p>
+        <p>〒666-0138 兵庫県川西市西多田1-12-8</p>
+      </div>
+      <p>© 2025 浄徳寺 個別型永代供養墓</p>
+    </div>
+  </footer>
+
+  <a class="mobile-call" href="tel:0727931874" aria-label="浄徳寺に電話する">お電話で相談する</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
