@@ -151,20 +151,26 @@ ul,ol{padding:0}
 }
 .hero-title-top,
 .hero-title-bottom{
-  display:block;
+  display: block;
+  font-size: 1em;
+  line-height: 1.15;
 }
+
 .hero-title-top{
-  white-space:nowrap;
-  font-size:.82em;
+  white-space: nowrap;
+  margin-top: 0;
 }
+
 .hero-title-bottom{
-  margin-top:.08em;
+  margin-top: 0.08em;
 }
+
 .hero-lead{
-  max-width:42rem;
-  margin-top:18px;
-  font-size:clamp(1rem, 1.8vw, 1.15rem);
-  color:rgba(255,255,255,.93);
+  max-width: none;
+  margin-top: 18px;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: rgba(255,255,255,.93);
+  white-space: nowrap;
 }
 .hero-points{
   display:flex;
