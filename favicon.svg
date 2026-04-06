@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="浄徳寺">
-  <rect width="128" height="128" rx="24" fill="#f4efe5"/>
-  <path d="M18 58h92l-8-8H26z" fill="#2c221a"/>
-  <path d="M26 58h76v10H26z" fill="#4b3b2f"/>
-  <path d="M35 68h10v30H35zM57 68h14v30H57zM83 68h10v30H83z" fill="#6b5848"/>
-  <path d="M22 106h84v6H22z" fill="#2c221a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="16" fill="#f7f3ec"/>
+  <path d="M12 42h40v6H12z" fill="#8d6d49"/>
+  <path d="M18 42V26l14-10 14 10v16h-5V29L32 22l-9 7v13z" fill="#6f5234"/>
+  <path d="M24 30h16v4H24z" fill="#f7f3ec" opacity=".9"/>
 </svg>

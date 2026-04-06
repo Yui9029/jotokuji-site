@@ -1,36 +1,23 @@
-# 浄徳寺サイト v3
+# 浄徳寺 個別型永代供養墓 サイト一式（v4）
 
-GitHub Pages でそのまま公開できる静的サイトです。
+このフォルダは、GitHub Pages でそのまま公開できる静的サイト一式です。
 
-## ファイル構成
+## 置くファイル
+- index.html
+- 404.html
+- styles.css
+- script.js
+- .nojekyll
+- favicon.svg
+- images フォルダ
 
-```text
-index.html            # 文章・構成
-404.html              # 404ページ
-styles.css            # デザイン
-script.js             # モバイルメニューなどの軽い動作
-.nojekyll             # GitHub Pages用
-favicon.svg           # アイコン
-images/
-  entrance-hero.jpg   # メイン画像
-  entrance-detail.jpg # サブ画像
-  entrance-square.jpg # 予備画像
-  ogp.jpg             # SNS共有画像
-GitHub公開手順.md      # 初心者向け公開手順
-README.md
-```
+## 今回の改善点
+- 以前共有いただいた写真と今回共有いただいた写真を複数使用
+- 写真を用途に合わせてトリミング・明るさ調整
+- 「写真で見る浄徳寺」より前に、初めての方向けの説明を配置
+- スマホでも見やすいレスポンシブ対応
+- 24時間の電話相談導線を強化
 
-## どのファイルを編集すればよいか
-
-- 文章を変えたい → `index.html`
-- 色や余白を変えたい → `styles.css`
-- スマホメニューなどを変えたい → `script.js`
-- 写真を差し替えたい → `images` フォルダ
-
-## まずやること
-
-1. このフォルダ一式を GitHub リポジトリにアップロード
-2. `Settings > Pages` で `main / root` を公開元に設定
-3. 数分待って公開URLを確認
-
-詳しくは `GitHub公開手順.md` を見てください。
+## 重要
+GitHub へアップロードするときは、このフォルダ自体ではなく**中身**を
+リポジトリ直下に置いてください。
