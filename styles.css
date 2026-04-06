@@ -151,7 +151,7 @@ ul,ol{padding:0}
 }
 .hero-title-top,
 .hero-title-bottom{
-  display:inline-block;
+  display:block;
 }
 .hero-title-top{
   white-space:nowrap;
@@ -228,7 +228,7 @@ ul,ol{padding:0}
 }
 .trust-grid{
   display:grid;
-  grid-template-columns:repeat(3, minmax(240px, 370px));
+  grid-template-columns:repeat(3, minmax(220px, 370px));
   justify-content:center;
   gap:18px;
   align-items:stretch;
