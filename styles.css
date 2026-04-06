@@ -129,7 +129,11 @@ ul,ol{padding:0}
   position:relative;
   z-index:1;
   width:100%;
-  padding-top:48px;
+  min-height:clamp(680px, 82vh, 920px);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  padding-top:22px;
   padding-bottom:44px;
 }
 .eyebrow{
@@ -137,7 +141,7 @@ ul,ol{padding:0}
   align-items:center;
   gap:10px;
   padding:9px 16px;
-  margin-bottom:18px;
+  margin-bottom:12px;
   border:1px solid rgba(221,207,189,.9);
   border-radius:999px;
   background:rgba(246,241,232,.92);
@@ -171,12 +175,15 @@ ul,ol{padding:0}
   font-size:clamp(.98rem, 1.55vw, 1.1rem);
   color:rgba(255,255,255,.94);
 }
+.hero-lower{
+  margin-top:auto;
+}
 .hero-points{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
   list-style:none;
-  margin-top:28px;
+  margin-top:0;
 }
 .hero-points li{
   padding:10px 14px;
@@ -312,7 +319,7 @@ ul,ol{padding:0}
   align-items:center;
   justify-content:center;
   width:48px;height:48px;
-  margin-bottom:18px;
+  margin-bottom:12px;
   border-radius:50%;
   background:var(--surface-soft);
   color:var(--brand);
@@ -569,7 +576,7 @@ ul,ol{padding:0}
   font-size:1.25rem;
   font-weight:700;
   line-height:1.85;
-  margin-bottom:18px;
+  margin-bottom:12px;
 }
 .access-list{
   display:grid;
@@ -690,7 +697,7 @@ ul,ol{padding:0}
   .global-nav a:hover{background:#f8f2ea}
   .nav-call{text-align:center}
   .hero{min-height:640px}
-  .hero-content{min-height:640px;padding-top:34px;padding-bottom:30px}
+  .hero-content{min-height:640px;padding-top:22px;padding-bottom:30px}
   .hero-title-top{font-size:.74em}
   .trust-strip{padding-top:18px}
   .trust-grid{grid-template-columns:1fr;gap:12px}
