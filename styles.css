@@ -155,16 +155,13 @@ ul,ol{padding:0}
   font-size: 1em;
   line-height: 1.15;
 }
-
 .hero-title-top{
   white-space: nowrap;
   margin-top: 0;
 }
-
 .hero-title-bottom{
   margin-top: 0.08em;
 }
-
 .hero-lead{
   max-width: none;
   margin-top: 18px;
