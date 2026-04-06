@@ -189,7 +189,7 @@ ul,ol{padding:0}
   display:flex;
   flex-wrap:wrap;
   gap:14px;
-  margin-top:30px;
+  margin-top:20px;
 }
 .btn{
   display:inline-flex;
@@ -220,7 +220,7 @@ ul,ol{padding:0}
 }
 .btn-large{min-height:58px;padding-inline:28px}
 .hero-note{
-  margin-top:16px;
+  margin-top:14px;
   font-size:.98rem;
   color:rgba(255,255,255,.95);
 }
@@ -690,7 +690,7 @@ ul,ol{padding:0}
   .global-nav a:hover{background:#f8f2ea}
   .nav-call{text-align:center}
   .hero{min-height:640px}
-  .hero-content{padding-top:34px;padding-bottom:34px}
+  .hero-content{min-height:640px;padding-top:34px;padding-bottom:30px}
   .hero-title-top{font-size:.74em}
   .trust-strip{padding-top:18px}
   .trust-grid{grid-template-columns:1fr;gap:12px}
