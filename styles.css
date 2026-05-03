@@ -705,6 +705,7 @@ ul,ol{padding:0}
   .hero-title-top{font-size:.74em}
   .trust-strip{padding-top:18px}
   .trust-grid{grid-template-columns:1fr;gap:12px}
+  .trust-card{min-height:unset;padding:14px 20px 12px}
   .guide-cards,.reasons-grid,.pricing-grid,.pricing-meta,.gallery-centered{
     grid-template-columns:1fr;
   }
